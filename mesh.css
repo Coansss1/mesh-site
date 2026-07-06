@@ -18,7 +18,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; background: linear-gradient(#ECE5D9 0%, #ECE5D9 50%, #3A3128 50%); }
+html { scroll-behavior: smooth; background: #3A3128; }
 body {
   font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
   background: var(--paper);
