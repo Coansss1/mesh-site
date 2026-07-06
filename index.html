@@ -69,7 +69,12 @@ a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 .cta{padding:0 6vw 14vh;text-align:center}
 .cta a{display:inline-block;background:var(--clay);color:#fff;font-weight:800;font-size:clamp(17px,2vw,22px);padding:20px 46px;border-radius:999px;transition:transform .18s,background .18s}
 .cta a:hover{transform:translateY(-3px) rotate(-1deg);background:#3A3128}
-footer{padding:22px 6vw 30px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13.5px;color:var(--soft);border-top:2px solid #3A3128}
+footer{background:#3A3128;color:rgba(242,235,223,.75);padding:36px 6vw 40px;display:flex;flex-wrap:wrap;gap:18px 32px;justify-content:space-between;align-items:center;font-size:14px}
+footer .flogo{font-weight:800;font-size:22px;letter-spacing:-0.03em;color:#F2EBDF}
+footer .flogo span{color:#D89B6A}
+footer a{color:#F2EBDF;font-weight:600}
+footer a:hover{color:#DBB47E}
+footer nav{display:flex;gap:18px;flex-wrap:wrap}
 </style>
 </head>
 <body>
@@ -116,12 +121,13 @@ footer{padding:22px 6vw 30px;display:flex;flex-wrap:wrap;gap:12px;justify-conten
 </div>
 
 <div class="cta">
-  <a href="mailto:bernardo@meshevents.xyz?subject=Our%20event">let's make yours →</a>
+  <a href="contact.html">let's make yours →</a>
 </div>
 
 <footer>
-  <div>mesh. · rooted in Portugal · reaching globally</div>
-  <div>bernardo@meshevents.xyz</div>
+  <div class="flogo">mesh<span>.</span></div>
+  <nav><a href="about.html">About</a><a href="work.html">Work</a><a href="founders.html">Founders</a><a href="contact.html">Work with us</a></nav>
+  <div><a href="mailto:bernardo@meshevents.xyz">bernardo@meshevents.xyz</a> · rooted in Portugal, producing worldwide</div>
 </footer>
 
 </body>
