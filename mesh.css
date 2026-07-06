@@ -206,11 +206,11 @@ ul.checks.sand li::before { background: var(--sand-deep); }
 .cta-band h2 { font-size: clamp(30px, 4.5vw, 56px); margin-bottom: 18px; }
 .btn {
   display: inline-block; margin-top: 18px;
-  background: var(--white); color: var(--ink);
+  background: var(--teal-deep); color: #fff;
   font-weight: 700; padding: 14px 34px; border-radius: 999px;
   transition: transform .15s, background .15s;
 }
-.btn:hover { transform: translateY(-2px); background: var(--sand); }
+.btn:hover { transform: translateY(-2px); background: var(--espresso); }
 .btn.dark { background: var(--ink); color: var(--white); }
 .btn.dark:hover { background: var(--teal-deep); }
 
