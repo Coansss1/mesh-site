@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mesh. · boutique event production for tech and finance companies</title>
+<meta name="description" content="Mesh Events. We make rooms people talk about for years. Conferences and retreats for tech and finance companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+/* Warm palette pulled from the deck: clay/terracotta accents, sand + cream neutrals, warm ink */
+:root { --teal:#B0894F; --sand:#D9CCBD; --clay:#7C2500; --lapis:#9E4A29; --ink:#241E18; --paper:#ECE5D9; --soft:#5A5044; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Hanken Grotesk',sans-serif;background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+
+.masthead{display:flex;justify-content:space-between;align-items:flex-end;padding:12px 24px 4px}
+.corner-logo{font-weight:800;font-size:20px;letter-spacing:-0.03em}
+.corner-logo span{color:var(--clay)}
+.corner-nav{display:flex;align-items:center;gap:18px;font-size:13px;font-weight:700}
+.corner-nav a:hover{color:var(--clay)}
+.corner-nav a.cta{background:var(--ink);color:var(--paper);padding:5px 12px;border-radius:999px}
+.corner-nav a.cta:hover{background:var(--clay);color:var(--paper)}
+
+/* Marquee hero */
+.hero{padding:0 0 5vh}
+.marquee{overflow:hidden;white-space:nowrap;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);padding:1.2vh 0}
+.marquee .track{display:inline-block;animation:scroll 28s linear infinite;font-size:clamp(44px,8vw,110px);font-weight:800;letter-spacing:-0.03em}
+.marquee .track em{font-style:normal;color:var(--clay)}
+.marquee .track u{text-decoration:none;color:var(--lapis)}
+.marquee.reverse .track{animation-direction:reverse;color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.hero .who{max-width:900px;padding:6vh 6vw 0}
+.hero .who p{font-size:clamp(18px,2.2vw,26px);font-weight:600;line-height:1.45}
+.hero .who p b{background:var(--sand);padding:0 8px;border-radius:6px}
+
+/* Tilted photo cards */
+.deck{display:flex;flex-wrap:wrap;justify-content:center;gap:2vw;padding:8vh 4vw;position:relative}
+.pcard{width:min(340px,74vw);background:#fff;padding:12px 12px 44px;box-shadow:0 20px 40px -18px rgba(28,28,28,.35);transition:transform .3s ease;position:relative}
+.pcard img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.pcard .lbl{position:absolute;bottom:12px;left:16px;font-weight:700;font-size:14px}
+.pcard .stamp{position:absolute;top:-12px;right:-10px;background:var(--clay);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.06em;padding:7px 12px;border-radius:999px;transform:rotate(6deg)}
+.pcard.a{transform:rotate(-3.5deg)} .pcard.b{transform:rotate(2deg) translateY(24px)} .pcard.c{transform:rotate(-1deg)}
+.pcard.a:hover,.pcard.b:hover,.pcard.c:hover{transform:rotate(0) translateY(-6px);z-index:5}
+.pcard.b .stamp{background:var(--lapis)}
+.pcard.c .stamp{background:var(--teal)}
+.pcard{cursor:pointer}
+.pcard-link{position:absolute;inset:0;z-index:6}
+
+/* Big list of what we take off your plate */
+.plate-sec{background:#3A3128;color:#F2EBDF;padding:10vh 6vw}
+.plate-sec h2{font-size:clamp(28px,4.4vw,56px);font-weight:800;letter-spacing:-0.02em;margin-bottom:5vh;max-width:20ch}
+.plate-sec h2 span{color:#D89B6A}
+.strike-list{display:flex;flex-direction:column}
+.strike-list div{font-size:clamp(19px,2.8vw,34px);font-weight:700;padding:2.2vh 0;border-top:1px solid rgba(242,235,223,.16);color:rgba(242,235,223,.92);position:relative;cursor:default;display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+
+.strike-list div::after{content:attr(data-relief);font-size:clamp(13px,1.4vw,17px);font-weight:800;color:#DBB47E;white-space:nowrap;letter-spacing:.02em}
+
+
+/* Proof */
+.proof{padding:10vh 6vw;text-align:center}
+.proof .big{font-size:clamp(64px,13vw,180px);font-weight:800;letter-spacing:-0.04em;line-height:.95;color:var(--clay)}
+.proof .expl{font-size:clamp(17px,2vw,22px);font-weight:600;margin-top:12px}
+.proof .quotes{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;margin-top:6vh}
+.proof .q{background:#fff;border-radius:14px;padding:20px 24px;max-width:330px;text-align:left;font-size:14.5px;color:var(--soft);box-shadow:0 12px 30px -18px rgba(28,28,28,.3)}
+.proof .q b{display:block;color:var(--ink);margin-top:10px;font-size:13px}
+
+.cta{padding:0 6vw 14vh;text-align:center}
+.cta a{display:inline-block;background:var(--clay);color:#fff;font-weight:800;font-size:clamp(17px,2vw,22px);padding:20px 46px;border-radius:999px;transition:transform .18s,background .18s}
+.cta a:hover{transform:translateY(-3px) rotate(-1deg);background:#3A3128}
+footer{padding:22px 6vw 30px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13.5px;color:var(--soft);border-top:2px solid #3A3128}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+<a class="corner-logo" href="index.html">mesh<span>.</span></a>
+<nav class="corner-nav"><a href="about.html">About</a><a href="work.html">Work</a><a href="founders.html">Founders</a><a href="contact.html" class="cta">Work with us</a></nav>
+</header>
+
+<div class="hero">
+  <div class="marquee"><div class="track">rooms people talk about for years <em>·</em> conferences <em>·</em> retreats <em>·</em> offsites <em>·</em> rooms people talk about for years <em>·</em> conferences <em>·</em> retreats <em>·</em> offsites <em>·</em>&nbsp;</div></div>
+  <div class="marquee reverse"><div class="track">portugal to anywhere · 13 countries · 4 continents · zero details on your plate · portugal to anywhere · 13 countries · 4 continents · zero details on your plate ·&nbsp;</div></div>
+  <div class="who">
+    <p>We're <b>mesh.</b> We produce conferences and retreats for tech and finance companies, end to end, so your team never thinks about a single detail. Boutique by choice: few clients, both founders at every event.</p>
+  </div>
+</div>
+
+<div class="deck">
+  <div class="pcard a"><a class="pcard-link" href="work.html#cannes" aria-label="See the Cannes conference for Tres Finance"></a><span class="stamp">CANNES ★★</span><img src="assets/cannes-room.jpg" alt=""><span class="lbl">120 execs, two Michelin stars</span></div>
+  <div class="pcard b"><a class="pcard-link" href="work.html#montenegro" aria-label="See the Montenegro retreat for Delphi Digital"></a><span class="stamp">MONTENEGRO</span><img src="assets/kotor-sunset.jpg" alt=""><span class="lbl">80 people, one bay, zero worries</span></div>
+  <div class="pcard c"><a class="pcard-link" href="work.html#morocco" aria-label="See the Morocco retreat for 1inch"></a><span class="stamp">MOROCCO ×160</span><img src="assets/texture-canyon.jpg" alt=""><span class="lbl">six days, every detail handled</span></div>
+</div>
+
+<div class="plate-sec">
+  <h2>everything that lands on your plate? <span>we take it.</span></h2>
+  <div class="strike-list">
+    <div data-relief="handled.">visas, flights, compliance, three countries at once</div>
+    <div data-relief="scouted in person.">venues nobody else thought to ask for</div>
+    <div data-relief="tasted. twice.">menus, dietary needs, the wine</div>
+    <div data-relief="we bring Starlink.">venue wifi that would have died on day one</div>
+    <div data-relief="designed around energy.">agendas that don't exhaust your team</div>
+  </div>
+</div>
+
+<div class="proof">
+  <div class="big">100%</div>
+  <div class="expl">of our clients come back. every single one.</div>
+  <div class="quotes">
+    <div class="q">"The best event we've ever done, the perfect blend of venue, content and experience."<b>Tres Finance</b></div>
+    <div class="q">"Mesh handled everything end to end and let the team focus on being present."<b>Delphi Digital</b></div>
+    <div class="q">"Proactivity, problem-solving, and any level of complexity, even under tight deadlines."<b>1inch</b></div>
+  </div>
+</div>
+
+<div class="cta">
+  <a href="mailto:bernardo@meshevents.xyz?subject=Our%20event">let's make yours →</a>
+</div>
+
+<footer>
+  <div>mesh. · rooted in Portugal · reaching globally</div>
+  <div>bernardo@meshevents.xyz</div>
+</footer>
+
+</body>
+</html>
