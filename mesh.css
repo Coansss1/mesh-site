@@ -240,7 +240,7 @@ footer a:hover { color: var(--sand); }
 .nav-logo { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; color: var(--ink); line-height: 1; }
 .nav-logo span { color: var(--teal-deep); }
 .foot-logo { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; color: var(--paper); line-height: 1; }
-.foot-logo span { color: var(--teal-deep); }
+.foot-logo span { color: #D89B6A; }
 
 /* Typographic hero (v2 — replaces logo-over-photo) */
 .hero-type {
@@ -280,3 +280,9 @@ footer a:hover { color: var(--sand); }
   text-shadow: 0 1px 12px rgba(0,0,0,0.35);
 }
 .hero-work .scrim { background: linear-gradient(180deg, rgba(28,28,28,0.12) 40%, rgba(28,28,28,0.55) 100%); }
+
+/* Contact: pills empilhadas no telemóvel */
+@media (max-width: 640px) {
+  .pill-row { flex-direction: column; }
+  .pill-row .btn { text-align: center; width: 100%; }
+}
